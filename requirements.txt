@@ -1,0 +1,4 @@
+fastapi[all] == 0.108.00
+sqlalchemy == 2.0.25
+alembic == 1.13.1
+psycopg2 == 2.9.9
