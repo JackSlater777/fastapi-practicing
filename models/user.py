@@ -10,8 +10,15 @@ class Degree(BaseModel):
     type_degree: DegreeType
 
 
-class User(BaseModel):
-    id: int
+class UserToAdd(BaseModel):
     role: str
     name: str
-    degree: Optional[list[Degree]] = []
+    degree: Optional[list[Degree]]
+
+
+class User(UserToAdd):
+    id: int
+    degree: list[Degree] = []
+    # role: str
+    # name: str
+    # degree: Optional[list[Degree]] = []
